@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+PL:wght@100..400&display=swap");
+.main {
+  flex: 1;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* position: fixed; */
+  img {
+    height: 40px;
+    border-radius: 50%;
+  }
+}
+
+.container {
+  max-width: 900px;
+  /* scroll-behavior: smooth; */
+  margin: auto;
+  .greet {
+    margin-top: 7%;
+    font-weight: bolder;
+    color: #717172;
+    span {
+      font-size: 40px;
+      font-family: "Playwrite PL", cursive;
+      background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p {
+      font-size: 30px;
+    }
+  }
+  .cards {
+    display: flex;
+    justify-content: baseline;
+    gap: 25px; /* Center the cards and add space between them */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    .card-item {
+      background: #fbfcfd;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 40px 0;
+      padding: 10px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      width: 200px;
+      cursor: pointer;
+      img {
+        height: 50px; /* Increase the height for better visibility */
+        margin-bottom: 10px; /* Add some space between the image and text */
+      }
+      p {
+        font-size: 15px; /* Adjust the font size for the text */
+        font-weight: 500;
+        color: #333; /* Set a color for the text */
+      }
+      &:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+  .main-bottom {
+    bottom: 10px;
+    position: absolute;
+    width: 100%;
+    max-width: 900px;
+    padding: 0 0px;
+    margin: auto;
+
+    .search-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      gap: 15px;
+      padding: 10px;
+      background: #ecf0f4;
+      border-radius: 15px;
+    }
+    .search-box input {
+      height: 6vh;
+      width: 85%;
+      background: transparent;
+      border-color: transparent;
+      outline: none;
+      font-size: 17px;
+      padding-left: 10px;
+    }
+    div img {
+      height: 25px;
+      margin: 0 4px;
+      cursor: pointer;
+    }
+  }
+  .footer p{
+    font-size: 12px;
+    margin-left: 5px;
+  }
+}
+.result {
+    max-height: 75vh;
+    overflow-y: scroll;
+    scroll-behavior: unset;
+    /* padding: 0 5%; */
+    &::-webkit-scrollbar{
+        display: none;
+    }
+  .result-title,
+  .result-data {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  img {
+    height: 30px;
+    border-radius: 50%;
+  }
+}
+/* Mobile styles */
+@media screen and (max-width: 767px) {
+  body{
+    max-height: 10vh;
+  }
+  .nav{
+    padding: 10px 20px;
+  }
+  .container{
+    max-width: 90%;
+    margin-left: 25px;
+    .greet{
+      span{
+        font-size: 30px;
+      }
+      p{
+        font-size: 24px;
+      }
+    }
+    .cards {
+      margin-top: 15px;
+      .card-item{
+        margin: 2px;
+        width: 90%;
+        img{
+          height: 20px;
+          margin-bottom: 0;
+        }
+      }
+
+    }
+  }
+  .main-bottom{
+    max-width: 90%;
+    text-wrap: wrap;
+    .search-box{
+      width: 87%;
+      input[type="text"]{
+        height: 3vh;
+      }
+      #input_img{
+        display: none;
+      }
+    }
+    .footer{
+      text-wrap: wrap;
+      width: 90%;
+    margin-bottom: 10px;
+    margin-left: 6px;
+
+    }
+   
+  }
+}
+.offline-alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  z-index: 1000;
+  height: 50px ;
+}
+.img-send{
+  opacity: 0.5;
+  pointer-events: none;
+}

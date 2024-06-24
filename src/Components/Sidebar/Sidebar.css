@@ -1,0 +1,96 @@
+.Sidebar{
+    min-height: 100vh;
+    /* width: 15vw; */
+    background-color: #ecf0f4;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 25px 15px 20px;
+
+    img{
+        height: 22px;
+    }
+    .menu{
+        padding: 15px;
+        cursor: pointer;
+        display: block;
+        margin-left: 0px;
+        /* margin-top: 5px; */
+        height: 50px;
+        box-sizing: border-box;
+        border-radius: 50%;
+
+    }
+    .menu:hover{
+        border-radius: 50%;
+        background: #dbdede;
+        transition: 0.3s ease-in;
+    
+    }
+    .new-chat{
+        cursor: pointer;
+        margin-top: 30px;
+        align-items: center;
+        display: inline-flex;
+        gap: 10px;
+        background: #edeeee;
+        padding: 8px 15px;
+        border-radius: 25px;
+    }
+    .new-chat:hover{
+        background-color: #dbdede;
+        transition: 0.1s ease-in;
+    }
+    .recent-entry{
+        cursor: pointer;
+        margin-top: 10px;
+        align-items: center;
+        display: flex;
+        gap: 10px;
+        height: 25px;
+        width: 13vw; 
+        padding: 2px 10px;
+        box-sizing: border-box; 
+    }
+    .recent-entry:hover{
+        background-color: #dbdede;
+        transition: 0.1s ease-in;
+        border-radius: 50px;
+    }
+    .head{
+        margin-top: 25px;
+    }
+    .bottom{
+        .help,.activity,.setting{
+            cursor: pointer;
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            height: 35px;
+            padding: 6px 15px;
+            
+        }
+        p{
+            margin-top: -1px;
+        }.help:hover,.activity:hover,.setting:hover{
+            background-color: #dbdede;
+            transition: 0.1s ease-in;
+            border-radius: 50px;
+        }
+        margin-bottom: 30px;
+   }
+}
+.Sidebar.extended{
+    transition: 0.3s ease-in;
+
+}
+  .Sidebar.collapsed {
+    width: 4vw;
+    padding-left: 4px;
+    transition: 0.3s ease-in;
+  }
+@media (max-width:767px){
+    .Sidebar{
+        display: none;
+    }
+}
