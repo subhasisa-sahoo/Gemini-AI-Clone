@@ -1,4 +1,4 @@
-const api_Key = "AIzaSyBdIMd7GSo8jFXh8NmvS-z92uy1xCTYbRw";
+const api_Key = VITA_API_KEY;
 /*
  * Install the Generative AI SDK
  *
